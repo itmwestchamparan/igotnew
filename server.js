@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '/')));
 
 // Connect to MongoDB
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/igot';
+const MONGO_URI = process.env.MONGO_URI || 'mongodb+srv://mecabhishek:*****@cluster0.4aias.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 mongoose.connect(MONGO_URI)
   .then(() => console.log('MongoDB connected successfully'))
   .catch(err => console.error('MongoDB connection error:', err));
