@@ -5,11 +5,12 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run build && node server.js",
+    "start": "node server.js",
     "dev": "nodemon server.js",
     "build": "mkdir -p build && npm run build:css && npm run build:js",
     "build:css": "postcss styles.css -o build/styles.min.css --use autoprefixer cssnano",
-    "build:js": "terser script.js -o build/script.min.js --compress --mangle"
+    "build:js": "terser script.js -o build/script.min.js --compress --mangle",
+    "postinstall": "npm run build"
   },
   "keywords": [],
   "author": "",
