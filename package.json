@@ -2,12 +2,12 @@
   "name": "igot",
   "version": "1.0.0",
   "description": "",
-  "main": "script.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "npm run build && node server.js",
     "dev": "nodemon server.js",
-    "build": "mkdir build && npm run build:css && npm run build:js",
+    "build": "mkdir -p build && npm run build:css && npm run build:js",
     "build:css": "postcss styles.css -o build/styles.min.css --use autoprefixer cssnano",
     "build:js": "terser script.js -o build/script.min.js --compress --mangle"
   },
